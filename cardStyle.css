@@ -31,7 +31,9 @@ nav ul a {
 	text-decoration: none;
 	color: black;
 }
-
+.container{
+	padding: 0 100px;
+}
 .button {
 	display: flex;
 	justify-content: center;
@@ -67,38 +69,67 @@ nav ul a {
 }
 
 .article-card {
-	width: 320px;
-	margin: 30rem 0;
+	width: 400px;
+	height: auto;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	flex-direction: column;
+    box-shadow: 1px 1px 5px 5px gainsboro;	
+	gap: 10px;
 }
 
-.article-card h1 {
+.card-text h1 {
 	margin-top: 20px;
 	font-weight: 600;
 	font-size: 25px;
 	line-height: 27px;
 }
 
-.article-card p {
-	font-weight: 400;
+.card-text p {
+	font-weight: 380px;
 	font-size: 17px;
 	line-height: 22px;
 	margin: 15px 0;
 }
+#blog-desc{
+	max-height: 150px;
+	overflow-y:scroll;
+}
+.card-text span{
+	color: #828282;
+	font-style: italic;
+	font-size: 12.5px;
 
-#image{
-	margin-top: 30px;
+}
+.article-card img{
+	width: 100%;
 }
 .body-div2 {
-	display: flex;
-	flex-direction: row ;
-	/* justify-content: space-between; */
+	display: grid;
+	grid-template-columns: auto auto auto;
+	justify-content: space-evenly;
 	float: left;
+	gap: 50px;
+	/* width: 100%; */
+	height: auto;
+
+}
+.card-buttons{
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	gap: 18px;
+	padding: 0 20px 15px 0;
 }
 
-#popup {
+.card-text{
+	display: flex;
+	flex-direction: column;
+	padding: 0 25px;
+}
+
+/* none */
+/* #popup {
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -107,7 +138,7 @@ nav ul a {
 	position: fixed;
 	background-color: #313131;
 	overflow: auto;
-}
+} */
 
 img#close {
 	position: absolute;
@@ -126,7 +157,8 @@ img#rect {
 	margin: 41px 0px 0px 18px;
 }
 
-div#popupContact {
+/* none */
+#popupCard {
 	display: none;
 	flex-direction: column;
 	position: absolute;
@@ -146,6 +178,7 @@ div#popupContact {
 	border: 2px solid gray;
 	font-family: raleway;
 	background-color: #fff;
+	gap: 30px;
 	/* height: 572px; */
 }
 
@@ -165,7 +198,7 @@ h2 {
 	display: flex;
 }
 
-input[type="text"] {
+input{
 	
 	padding: 0px 0px 0px 21px;
 	width: 884px;
@@ -179,7 +212,7 @@ input[type="text"] {
 }
 
 textarea {
-	margin:14px 0px 0px 0px;
+	/* margin:14px 0px 0px 0px; */
 	padding: 12px 0px 0px 20px;
 	width: 884px;
 	height: 232px;
@@ -209,10 +242,26 @@ font-size: 18px;
 line-height: 25px;
 width: 100px;
 height: 39px;
-margin: 71px 64px 103px 784px;
+margin: 41px 64px 103px 784px;
 align-items: center;
 text-align: center;
 background: #6C63FF;
 border-radius: 4px;
 color: #FFFFFF;
+}
+#edit , #delete{
+font-family: Nunito;
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 25px;
+width: 70px;
+height: 35px;
+/* margin: 41px 64px 103px 784px; */
+/* align-items: center; */
+text-align: center;
+background: #6C63FF;
+border-radius: 4px;
+color: #FFFFFF;
+cursor: pointer;
 }
